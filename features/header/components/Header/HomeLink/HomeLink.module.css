@@ -1,0 +1,13 @@
+.container {
+  position: absolute;
+  right: 200px;
+  font-size: 1.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    font-size: 1rem;
+    position: absolute;
+    right: 30px;
+  }
+}

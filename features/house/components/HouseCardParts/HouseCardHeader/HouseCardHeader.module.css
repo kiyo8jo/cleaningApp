@@ -1,0 +1,11 @@
+.card_header {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    margin-bottom: 5px;
+}
+
+.card_header p:nth-child(2) {
+    color: red;
+}

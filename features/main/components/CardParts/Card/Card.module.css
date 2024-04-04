@@ -1,0 +1,38 @@
+/* card */
+.card {
+  height: 200px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 4px;
+  box-shadow: 3px 3px 15px -5px #777777;
+  /* background-color: #ffe2e2; */
+  width: 250px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  scale: 1.05;
+}
+
+/* cleaningTypeによって付与されるbgc */
+
+.OUT {
+  background-color:  #fee;
+}
+
+.IN {
+  background-color: #eef;
+}
+
+.OUT-IN {
+  background-color: #ffe;
+}
+
+.STAY {
+  background-color: rgb(236, 255, 225);
+}
+
+.NONE {
+  background-color: white;
+}

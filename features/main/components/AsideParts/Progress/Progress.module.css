@@ -1,0 +1,28 @@
+.status_container {
+  font-weight: bold;
+  height: 200px;
+  margin: 5px 0 20px 0;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cleaning_status {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cleaning_status p {
+  margin: 10px;
+}
+
+.cleaning_status p:nth-child(1) {
+  margin-right: 10px;
+  width: 50px;
+}

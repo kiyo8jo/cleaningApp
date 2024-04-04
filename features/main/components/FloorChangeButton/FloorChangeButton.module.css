@@ -1,0 +1,31 @@
+.btn_container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.btn {
+  width: 100px;
+  background: #e2fad1;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid gray;
+  margin: 10px;
+  transition: all 0.3s;
+  user-select: none;
+}
+
+.btn:hover {
+  scale: 1.1;
+}
+
+.active {
+  background: gray;
+  pointer-events: none;
+}
+
+.not_select {
+  pointer-events: none;
+}
