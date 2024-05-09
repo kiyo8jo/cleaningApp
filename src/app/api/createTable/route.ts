@@ -1,14 +1,14 @@
 import { roomDataType } from "@/types/types";
 import { supabase } from "@/utils/supabaseClient";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 type req = {
   newData_1F: roomDataType[];
   newData_2F: roomDataType[];
 };
 
-export async function POST(req: Request, res: Response) {
-  try {
+export async function POST(req: NextRequest, res: Response) {
+  // try {
     const { newData_1F, newData_2F }: req = await req.json();
 
     await supabase.from("rooms_1f").delete().neq("id", 0);
@@ -61,7 +61,7 @@ export async function POST(req: Request, res: Response) {
       )
     );
     return NextResponse.json({ message: "Success" });
-  } catch (error) {
-    return { message: "API ERROR" };
-  }
+  // } catch (error) {
+  //   return { message: "API ERROR" };
+  // }
 }

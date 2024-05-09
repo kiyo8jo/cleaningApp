@@ -103,19 +103,3 @@ export const sanitize = (value: string) => {
 };
 
 // header
-// pathNameによって、表示される文とLinkのhrefを変更する関数
-
-export const setHeaderLinks = () => {
-  const currentPath = usePathname();
-  let currentWord = "";
-
-  switch (currentPath) {
-    case "/front":
-      currentWord = "フロント用画面";
-      break;
-    case "/house":
-      currentWord = "ハウス用画面";
-      break;
-  }
-  return { currentPath, currentWord };
-};

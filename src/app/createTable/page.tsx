@@ -1,11 +1,12 @@
 "use client";
 import { roomDataType } from "@/types/types";
 import styles from "./page.module.css";
-import React, { useState } from "react";
+
 import * as XLSX from "xlsx";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
-const page = () => {
+const Page = () => {
   const [newData_1F, setNewData_1F] = useState<roomDataType[] | null>(null);
   const [newData_2F, setNewData_2F] = useState<roomDataType[] | null>(null);
   const router = useRouter();
@@ -79,4 +80,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

@@ -1,7 +1,7 @@
 import { supabase } from "@/utils/supabaseClient";
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function POST(req: Request, res: Response) {
+export async function POST(req: NextRequest, res: Response) {
   const { id, cleaningType, nowBeds, inBeds, noneCleaning, is1F, memo } =
     await req.json();
   const table = is1F ? "rooms_1f" : "rooms_2f";
