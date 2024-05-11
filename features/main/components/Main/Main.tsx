@@ -21,23 +21,6 @@ const Main = () => {
 
   const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
-  // apiをたたいて1Fのデータを取得する関数
-  const getRooms_1f = async (API_URL: string) => {
-    const res_1f = await fetch(`${API_URL}/api/rooms/1f`, {
-      cache: "no-store",
-    });
-    const rooms_1f: roomDataType[] = await res_1f.json();
-    return rooms_1f;
-  };
-  // apiをたたいて2Fのデータを取得する関数
-  const getRooms_2f = async (API_URL: string) => {
-    const res_2f = await fetch(`${API_URL}/api/rooms/2f`, {
-      cache: "no-store",
-    });
-    const rooms_2f: roomDataType[] = await res_2f.json();
-    return rooms_2f;
-  };
-
   const getRooms = async (): Promise<void> => {
     // apiをたたいて1Fと2Fのデータを取得しstateにセット
 
@@ -48,7 +31,7 @@ const Main = () => {
   useEffect(() => {
     const doGetRooms = async () => await getRooms();
     doGetRooms();
-  }, [targetRoom]);
+  }, []);
 
   return (
     <main className={styles.main}>
