@@ -31,7 +31,7 @@ const Main = async() => {
   useEffect(() => {
     const doGetRooms = async () => await getRooms();
     doGetRooms();
-  }, []);
+  }, [targetRoom]);
 
   return (
     <main className={styles.main}>
