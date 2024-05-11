@@ -8,7 +8,7 @@ import Aside from "../AsideParts/Aside";
 import { getRooms_1f, getRooms_2f } from "@/utils/hooks";
 import { roomDataType } from "@/types/types";
 
-const Main = async() => {
+const Main = () => {
   // useEffectでapiをたたき、取得したデータのstate
   const [rooms_1f, setRooms_1f] = useState<roomDataType[]>([]);
   const [rooms_2f, setRooms_2f] = useState<roomDataType[]>([]);
