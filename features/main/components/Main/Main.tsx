@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-dynamic'
 
 import styles from "./Main.module.css";
 import Card from "../CardParts/Card/Card";
