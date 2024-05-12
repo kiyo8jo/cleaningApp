@@ -19,7 +19,7 @@ const Main = () => {
   // asideに表示させる部屋のstate
   const [targetRoom, setTargetRoom] = useState<roomDataType | null>(null);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
+  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
 
   const getRooms = async (): Promise<void> => {
     // apiをたたいて1Fと2Fのデータを取得しstateにセット

@@ -10,6 +10,7 @@ type props = {
 const OutCardButton = ({ room, getRooms, setTargetRoom }: props) => {
   // outの状態を変更する処理
   const changeButton = async (id: number) => {
+
     await supabase.from("rooms_1f").update({ out: true }).eq("id", id);
     await supabase.from("rooms_2f").update({ out: true }).eq("id", id);
     getRooms();
