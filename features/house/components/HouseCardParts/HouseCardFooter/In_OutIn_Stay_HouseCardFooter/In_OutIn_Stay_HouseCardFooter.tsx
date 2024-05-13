@@ -9,9 +9,13 @@ const In_OutIn_Stay_HouseCardFooter = ({ room }: props) => {
   return (
     <div className={styles.footer_container}>
       <div className={styles.footer_right_container}>
-        <div className={styles.beds}>2→1</div>
+        <div className={styles.beds}>
+          <p className={styles.beds}>{`${room.nowBeds}→${room.inBeds}`}</p>
+        </div>
         <div className={styles.guests}>
-          <p>3/2/1</p>
+          <p>
+            {room.inAdult}/{room.inInf}/{room.inKidsInf}
+          </p>
         </div>
       </div>
       <div className={styles.footer_left_container}>{room.memo}</div>
