@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./FloorChangeButton.module.css";
 import { roomDataType } from "@/types/types";
+import styles from "./FloorChangeButton.module.css";
 
 type props = {
   is1F: boolean;
@@ -10,7 +9,7 @@ type props = {
 
 const FloorChangeButton = ({ is1F, setIs1F, targetRoom }: props) => {
   return (
-    // targetRoomが選択されている場合、操作できなくさせるcssを付与
+    // targetRoomが選択されている場合、操作できなくさせるcssを持つクラスを付与
     <div
       className={`${styles.btn_container} ${targetRoom && styles.not_select}`}
     >

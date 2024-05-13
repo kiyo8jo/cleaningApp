@@ -1,17 +1,12 @@
-import React from "react";
-import styles from "./Out_None_CardContents.module.css";
 import { roomDataType } from "@/types/types";
+import styles from "./Out_None_CardContents.module.css";
 
 type props = {
   room: roomDataType;
   setTargetRoom: React.Dispatch<React.SetStateAction<roomDataType | null>>;
 };
 
-const Out_None_CardContents = ({
-  room,
-
-  setTargetRoom,
-}: props) => {
+const Out_None_CardContents = ({ room, setTargetRoom }: props) => {
   return (
     <div className={styles.container} onClick={() => setTargetRoom(room)}>
       <div className={styles.out_container}>

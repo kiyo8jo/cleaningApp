@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../../Aside.module.css";
 import {
   BedsStatusOptions,
   guestsOptions,
@@ -12,6 +11,7 @@ import {
 } from "@/utils/options";
 import { createObjOptions, createOptions, sanitize } from "@/utils/hooks";
 import { roomDataType } from "@/types/types";
+import styles from "../../Aside.module.css";
 
 type props = {
   targetRoom: roomDataType | null;
@@ -184,7 +184,7 @@ const StayTargetRoom = ({ targetRoom, setTargetRoom, is1F }: props) => {
         <div className={styles.targetRoom_status}>
           <label htmlFor="memo">Memo</label>
           <textarea
-          // textareaのvalueはサニタイズし、supabaseのemptyやnullを文字として取得したくないので''を返す
+            // textareaのvalueはサニタイズし、supabaseのemptyやnullを文字として取得したくないので''を返す
             value={sanitize(memo) ?? ""}
             id="memo"
             onChange={(e) => setMemo(e.target.value)}

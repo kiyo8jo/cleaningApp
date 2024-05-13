@@ -1,13 +1,11 @@
 "use client";
 
-import React from "react";
-import styles from "./CurrentLink.module.css";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
+import styles from "./CurrentLink.module.css";
 
 const CurrentLink = () => {
-  // pathNameによって、表示される文とLinkのhrefを変更する関数
-
+  // 現在のpathに応じて表示させたい文字とhrefを返す関数
   const setHeaderLinks = () => {
     const currentPath = usePathname();
     let currentWord = "";
@@ -23,7 +21,6 @@ const CurrentLink = () => {
     return { currentPath, currentWord };
   };
 
-  // pathNameによって、表示される文とLinkのhrefを変更する関数
   const { currentPath, currentWord } = setHeaderLinks();
 
   return (

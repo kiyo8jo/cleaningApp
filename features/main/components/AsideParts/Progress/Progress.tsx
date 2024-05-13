@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./Progress.module.css";
 import { roomDataType } from "@/types/types";
+import styles from "./Progress.module.css";
 
 type props = {
   rooms_1f: roomDataType[];

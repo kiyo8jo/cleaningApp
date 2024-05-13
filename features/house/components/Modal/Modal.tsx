@@ -1,8 +1,8 @@
 "use client";
 
-import styles from "./Modal.module.css";
 import { roomDataType } from "@/types/types";
 import { scrollBlockCancel } from "@/utils/hooks";
+import styles from "./Modal.module.css";
 
 type props = {
   targetRoom: roomDataType | null;
@@ -21,12 +21,11 @@ const Modal = ({ targetRoom, setTargetRoom, setIsModal, is1F }: props) => {
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    
     e.preventDefault();
     const API_URL = process.env.NEXT_PUBLIC_API_URL!;
-    // API名を各cleaningTypeの小文字にしているので大文字であるtargetRoomのcleaningTypeを小文字に変換
+    // API名を各cleaningTypeの小文字にしているので、大文字であるtargetRoomのcleaningTypeを小文字に変換
     const lowerCleaningType = targetRoom!.cleaningType.toLowerCase();
-    
+
     // 小文字に変換したcleaningTypeを使って対応するAPIをたたく
     await fetch(`${API_URL}/api/modal/${lowerCleaningType}`, {
       method: "POST",

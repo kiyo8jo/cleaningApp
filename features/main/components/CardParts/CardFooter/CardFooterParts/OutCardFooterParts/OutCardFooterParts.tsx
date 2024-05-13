@@ -1,7 +1,6 @@
-import React from "react";
-import styles from "../CardFooterParts.module.css";
 import { roomDataType } from "@/types/types";
 import OutCardButton from "../../OutCardButton/OutCardButton";
+import styles from "../CardFooterParts.module.css";
 
 type props = {
   room: roomDataType;
@@ -9,11 +8,7 @@ type props = {
   setTargetRoom: React.Dispatch<React.SetStateAction<roomDataType | null>>;
 };
 
-const OutCardFooterParts = ({
-  room,
-  getRooms,
-  setTargetRoom,
-}: props) => {
+const OutCardFooterParts = ({ room, getRooms, setTargetRoom }: props) => {
   return (
     <div className={styles.container}>
       <OutCardButton

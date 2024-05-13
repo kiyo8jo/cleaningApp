@@ -16,7 +16,6 @@ const StayCardContents = ({ room, setTargetRoom }: props) => {
       <div className={styles.arrow}>
         <p>→</p>
       </div>
-
       <div className={styles.in_container}>
         <div>
           <p>Type :</p>

@@ -1,9 +1,9 @@
 import { roomDataType } from "@/types/types";
-import styles from "./HouseCard.module.css";
+import { scrollBlock } from "@/utils/hooks";
 import HouseCardHeader from "../HouseCardHeader/HouseCardHeader";
 import HouseCardContents from "../HouseCardContents/HouseCardContents";
 import HouseCardFooter from "../HouseCardFooter/HouseCardFooter";
-import { scrollBlock } from "@/utils/hooks";
+import styles from "./HouseCard.module.css";
 
 type props = {
   room: roomDataType;
@@ -12,13 +12,9 @@ type props = {
   setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const HouseCard = ({
-  room,
-  setTargetRoom,
-  setIsModalOpen,
-}: props) => {
+const HouseCard = ({ room, setTargetRoom, setIsModalOpen }: props) => {
   return (
-    // 共通のクラスとcleaningTypeの種類により異なるcardの色を付与するクラス
+    // 共通のクラス+cleaningTypeの種類により異なるcardの色を付与するクラス
     <div
       className={`${styles.house_card} ${
         room.cleaningType ? styles[room.cleaningType] : ""

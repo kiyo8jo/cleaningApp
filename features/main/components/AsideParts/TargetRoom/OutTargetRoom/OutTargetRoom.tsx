@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import styles from "../../Aside.module.css";
 import {
   BedsStatusOptions,
   isCleaningOptions,
@@ -10,6 +9,7 @@ import {
 } from "@/utils/options";
 import { createObjOptions, createOptions, sanitize } from "@/utils/hooks";
 import { roomDataType } from "@/types/types";
+import styles from "../../Aside.module.css";
 
 type props = {
   targetRoom: roomDataType | null;

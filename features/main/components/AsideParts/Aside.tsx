@@ -1,12 +1,12 @@
-import styles from "./Aside.module.css";
+import { roomDataType } from "@/types/types";
 import OutTargetRoom from "./TargetRoom/OutTargetRoom/OutTargetRoom";
 import InTargetRoom from "./TargetRoom/InTargetRoom/InTargetRoom";
 import OutInTargetRoom from "./TargetRoom/OutInTargetRoom/OutInTargetRoom";
 import Progress from "./Progress/Progress";
 import NoneTargetRoom from "./TargetRoom/NoneTargetRoom/NoneTargetRoom";
-import { roomDataType } from "@/types/types";
 import StayTargetRoom from "./TargetRoom/StayTargetRoom/StayTargetRoom";
 import NotSelectTargetRoom from "./TargetRoom/NotSelectTargetRoom/NotSelectTargetRoom";
+import styles from "./Aside.module.css";
 
 type props = {
   targetRoom: roomDataType | null;

@@ -1,11 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import styles from "./HouseMain.module.css";
-import FloorChangeButton from "../../../main/components/FloorChangeButton/FloorChangeButton";
+
+import { useEffect, useState } from "react";
 import { roomDataType } from "@/types/types";
 import { getRooms_1f, getRooms_2f } from "@/utils/hooks";
+import FloorChangeButton from "../../../main/components/FloorChangeButton/FloorChangeButton";
 import HouseCard from "../HouseCardParts/HouseCard/HouseCard";
 import Modal from "../Modal/Modal";
+import styles from "./HouseMain.module.css";
 
 const HouseMain = () => {
   // useEffectでapiをたたき、取得したデータのstate
@@ -50,6 +51,7 @@ const HouseMain = () => {
           is1F={is1F}
         />
       )}
+      {/* 1Fと2Fの切り替えボタンに応じて表示するものを切り替える */}
       <div className={styles.card_container}>
         {is1F
           ? rooms_1f.map((room: roomDataType) => (

@@ -1,7 +1,6 @@
-import React from "react";
-import styles from "../CardFooterParts.module.css";
 import { roomDataType } from "@/types/types";
 import OutCardButton from "../../OutCardButton/OutCardButton";
+import styles from "../CardFooterParts.module.css";
 
 type props = {
   room: roomDataType;

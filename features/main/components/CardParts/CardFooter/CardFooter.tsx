@@ -1,11 +1,10 @@
-import React from "react";
-import styles from "./CardFooter.module.css";
-import InCardFooterParts from "./CardFooterParts/InCardFooterParts/InCardFooterParts";
 import { roomDataType } from "@/types/types";
+import InCardFooterParts from "./CardFooterParts/InCardFooterParts/InCardFooterParts";
 import StayCardFooterParts from "./CardFooterParts/StayCardFooterParts/StayCardFooterParts";
 import NoneCardFooterParts from "./CardFooterParts/NoneCardFooterParts/NoneCardFooterParts";
 import OutCardFooterParts from "./CardFooterParts/OutCardFooterParts/OutCardFooterParts";
 import OutInFooterParts from "./CardFooterParts/OutInFooterParts/OutInFooterParts";
+import styles from "./CardFooter.module.css";
 
 type props = {
   room: roomDataType;
@@ -44,7 +43,7 @@ const CardFooter = ({ room, getRooms, setTargetRoom }: props) => {
           />
         );
       case "NONE":
-        return <NoneCardFooterParts room={room}/>;
+        return <NoneCardFooterParts room={room} />;
     }
   };
   return <div className={styles.card_footer}>{selectFooter(room)}</div>;

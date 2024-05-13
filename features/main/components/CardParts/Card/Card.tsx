@@ -1,9 +1,8 @@
-
-import styles from "./Card.module.css";
+import { roomDataType } from "@/types/types";
 import CardHeader from "../CardHeader/CardHeader";
 import CardContents from "../CardContents/CardContents";
 import CardFooter from "../CardFooter/CardFooter";
-import { roomDataType } from "@/types/types";
+import styles from "./Card.module.css";
 
 type props = {
   room: roomDataType;

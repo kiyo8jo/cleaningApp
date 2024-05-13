@@ -1,12 +1,12 @@
 "use client";
 
-import styles from "./Main.module.css";
-import Card from "../CardParts/Card/Card";
 import { useEffect, useState } from "react";
-import FloorChangeButton from "../FloorChangeButton/FloorChangeButton";
-import Aside from "../AsideParts/Aside";
 import { getRooms_1f, getRooms_2f } from "@/utils/hooks";
 import { roomDataType } from "@/types/types";
+import FloorChangeButton from "../FloorChangeButton/FloorChangeButton";
+import Card from "../CardParts/Card/Card";
+import Aside from "../AsideParts/Aside";
+import styles from "./Main.module.css";
 
 const Main = () => {
   // useEffectでapiをたたき、取得したデータのstate
@@ -19,11 +19,10 @@ const Main = () => {
   // asideに表示させる部屋のstate
   const [targetRoom, setTargetRoom] = useState<roomDataType | null>(null);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3000";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL!;
 
   const getRooms = async (): Promise<void> => {
     // apiをたたいて1Fと2Fのデータを取得しstateにセット
-
     setRooms_1f(await getRooms_1f(API_URL));
     setRooms_2f(await getRooms_2f(API_URL));
   };

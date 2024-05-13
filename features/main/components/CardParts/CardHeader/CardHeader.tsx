@@ -1,6 +1,5 @@
-import React from "react";
-import styles from "./CardHeader.module.css";
 import { roomDataType } from "@/types/types";
+import styles from "./CardHeader.module.css";
 
 type props = { room: roomDataType };
 
