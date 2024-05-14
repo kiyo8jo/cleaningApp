@@ -1,9 +1,8 @@
 import { roomDataType } from "@/types/types";
-import { FaKey } from "react-icons/fa";
-import { FaCircleCheck } from "react-icons/fa6";
 
 // ----------------------------------------------------------------------
-// API
+// Main,HouseMain
+// ----------------------------------------------------------------------
 
 // apiをたたいて1Fのデータを取得する関数
 export const getRooms_1f = async (API_URL: string) => {
@@ -20,6 +19,7 @@ export const getRooms_2f = async (API_URL: string) => {
 
 // ----------------------------------------------------------------------
 // Aside
+// ----------------------------------------------------------------------
 
 // selectタグの中のoptionを作成する関数（optionsがstring[],number[]の場合）
 export const createOptions = (targetOptions: string[] | number[]) => {
@@ -46,9 +46,7 @@ export const createObjOptions = (
 // HouseCard
 // ----------------------------------------------------------------------
 
-// ----------------------------------------------------------------------
-// HouseCard
-
+// Modal操作中のスクロールロック、解除
 export const scrollBlock = () => {
   document.body.style.overflow = "hidden";
 };
@@ -58,15 +56,15 @@ export const scrollBlockCancel = () => {
 };
 
 // ----------------------------------------------------------------------
-
-// ----------------------------------------------------------------------
 // HouseCardContents
+// ----------------------------------------------------------------------
 
-// 通知状況や清掃状況に合わせてステータスにあったマークを返す関数
-// 鍵マーク
+// 通知状況や清掃状況に合わせてステータスにあったマーク(React Iconsを使用)を返す関数
 import styles from "../../features/house/components/HouseCardParts/HouseCardContents/HouseCardContents.module.css";
-import { usePathname } from "next/navigation";
-import next from "next";
+
+// 鍵マーク
+import { FaKey } from "react-icons/fa";
+
 export const getKey = (room: roomDataType) => {
   if (
     (room.cleaningType === "OUT" && room.out) ||
@@ -79,6 +77,8 @@ export const getKey = (room: roomDataType) => {
   }
 };
 // チェックマーク
+import { FaCircleCheck } from "react-icons/fa6";
+
 export const getCheck = (room: roomDataType) => {
   if (
     (room.cleaningType === "OUT" && room.outCleaning) ||
@@ -91,6 +91,9 @@ export const getCheck = (room: roomDataType) => {
   }
 };
 
+// ----------------------------------------------------------------------
+// Aside
+// ----------------------------------------------------------------------
 export const sanitize = (value: string) => {
   return String(value)
     .replace(/&/g, "&amp;")
@@ -99,4 +102,3 @@ export const sanitize = (value: string) => {
     .replace(/"/g, "&quot;");
 };
 
-// header

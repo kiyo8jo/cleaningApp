@@ -8,10 +8,12 @@ type props = {
 const Out_None_HouseCardFooter = ({ room }: props) => {
   return (
     <div className={styles.footer_container}>
-      <div className={styles.footer_right_container}>
+      <div className={styles.footer_left_container}>
         <p className={styles.beds}>{`${room.nowBeds}→${room.inBeds}`}</p>
       </div>
-      <div className={styles.footer_left_container}>{room.memo}</div>
+      <div className={styles.footer_right_container}>
+        {room.memo ? room.memo.substring(0, 11) + "..." : ""}
+      </div>
     </div>
   );
 };
