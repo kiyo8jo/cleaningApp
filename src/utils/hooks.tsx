@@ -101,4 +101,3 @@ export const sanitize = (value: string) => {
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
 };
-

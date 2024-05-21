@@ -24,15 +24,3 @@ export const stayCleaningTypeOptions = [
   { value: 0, text: "Eco" },
   { value: 1, text: "Normal" },
 ];
-
-// INチェック済みか未INチェックか　消す
-export const isInOptions = [
-  { value: 0, text: "未INCheck" },
-  { value: 1, text: "INCheck済み" },
-];
-
-// 清掃済みか未OUTか 消す
-export const isStayOptions = [
-  { value: 0, text: "未清掃" },
-  { value: 1, text: "清掃済み" },
-];

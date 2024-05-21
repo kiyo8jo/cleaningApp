@@ -16,6 +16,10 @@ body {
   user-select: none;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 button {
   font-size: 12px;
   padding: 0 3px;
